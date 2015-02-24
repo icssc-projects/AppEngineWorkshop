@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html lang="en">
+  <head>
+    <title>Doc</title>
+    <script type="text/javascript" src="/_ah/channel/jsapi"></script>
+  </head>
+  <body>
+    <h1>Signed in as {{ user.nickname() }}</h1>
+    <textarea rows="40" cols="120" id="doc">{{ text }}</textarea>
+    <div style="display:inline-block;vertical-align:top;margin-left:30px">
+      <h3 id="online_count">{{ online|length() }} on the document</h3>
+      <ul id="online_list">
+      {% for i in range(0, online|length) %}
+        {% if loop.index >= 10 %}
+          <li>...</li>
+          {% break %}
+        {% endif %}
+        <li>{{ online[i] }}</li>
+      {% endfor %}
+      </ul>
+    </div>
+    <script type="text/javascript">
+      var channelToken = '{{ token }}';
+      var docId = '{{ doc_id }}';
+    </script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="/js/doc.js"></script>
+  </body>
+</html>
+{% endautoescape %}
