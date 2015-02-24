@@ -27,7 +27,7 @@ your python code
   * doc_handler.py - The code for handling all client requests
   * document.py - The data model used for a document
   * template_renderer.py - Used to make rendering templates easier
-  * user.yp - The data model used for a user
+  * user.py - The data model used for a user
 * static/ - The folder used to contain all static files. Files like audio, images, javascript, and css will be stored here.
   * js/doc.js - The javascript file used to set up and control the channel api on the client side.
 * templates/ - The folder that contains all the template files. Template files are html files that contain special sections
