@@ -19,8 +19,7 @@ The layout of the project is as follows
 * README.md - The current file you are reading, not relevant or needed for AppEngine
 * app.yaml - The configuration file that tells AppEngine how to configure your project
 * doc.py - The python script to run when your app starts, it contains the path mapping from url paths ('/', or '/update') to 
-your 
-* python code
+your python code
 * run.bat - A windows script used to start up the server, not needed for AppEngine, but is useful
 * update.bat - A windows script used to load your app to AppEngine, not needed for AppEngine, but is useful
 * modules/ - The directory containing the majority of our python code, it is configured as a module so it can be imported
